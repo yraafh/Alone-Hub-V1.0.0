@@ -1,0 +1,360 @@
+-- Alone Hub V1.0.0 Make By Darling!#0480
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	local Window = OrionLib:MakeWindow({Name = "Alone Hub V1.0.0", HidePremium = true, IntroEnabled = true,IntroText = "Alone Hub Beta", SaveConfig = true, ConfigFolder = "OrionTest"})
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    -- Tabs
+    local Main = Window:MakeTab({
+		Name = "Main",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    })  
+    local Home = Window:MakeTab({
+		Name = "General Script",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    })  
+    local AHD = Window:MakeTab({
+		Name = "A Hero's Destiny",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    })  
+    local Arsenal = Window:MakeTab({
+		Name = "Arsenal",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local KL = Window:MakeTab({
+		Name = "King Legacy",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local AFS = Window:MakeTab({
+		Name = "Anime Fighters Simulator",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local BF = Window:MakeTab({
+		Name = "Blox Fruits",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local SL = Window:MakeTab({
+		Name = "Shindo Life",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local MS2 = Window:MakeTab({
+		Name = "MS2",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local DB = Window:MakeTab({
+		Name = "Dragon BLox",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    }) 
+    local NL = Window:MakeTab({
+		Name = "Ninja Legends",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    })
+    local VNP = Window:MakeTab({
+		Name = "Viet Nam Piece",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    })
+    local AA = Window:MakeTab({
+		Name = "Anime Adventures",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+    })
+    -- Buttons
+    Main:AddLabel("Alone Hub Make By Darling!#0480")
+    BF:AddButton({
+        Name = "ArceusX Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXHub/AV2022/main/README.md", true))()
+
+            end    
+    })
+    AA:AddButton({
+        Name = "Anime Adventures",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
+            
+            end    
+    })
+    Main:AddButton({
+        Name = "Discord Invite",
+        Callback = function()
+            setclipboard("https://discord.gg/Z6ufY8X9MS")
+
+            end    
+    })
+    NL:AddButton({
+        Name = "Reaper Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraVirgo/ninjalegendsfreegui/main/obfusc", true))()
+            end    
+    })
+    NL:AddButton({
+        Name = "Strike Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
+            end    
+    })
+    NL:AddButton({
+        Name = "BlackT Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/44"))()
+            end    
+    })
+    VNP:AddButton({
+        Name = "Grey Gui Hub",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/idkfffff/VnpScript/main/fix.Lua'))()
+            end    
+    })
+    BF:AddButton({
+        Name = "Super Fast Attack",
+        Callback = function()
+            local SuperFastMode = false -- Change to true if you want Super Super Super Fast attack (Like instant kill) but it will make the game kick you more than normal mode
+
+
+local plr = game.Players.LocalPlayer
+
+local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
+local CbFw2 = CbFw[2]
+
+function GetCurrentBlade() 
+    local p13 = CbFw2.activeController
+    local ret = p13.blades[1]
+    if not ret then return end
+    while ret.Parent~=game.Players.LocalPlayer.Character do ret=ret.Parent end
+    return ret
+end
+function AttackNoCD() 
+    local AC = CbFw2.activeController
+    for i = 1, 1 do 
+        local bladehit = require(game.ReplicatedStorage.CombatFramework.RigLib).getBladeHits(
+            plr.Character,
+            {plr.Character.HumanoidRootPart},
+            60
+        )
+        local cac = {}
+        local hash = {}
+        for k, v in pairs(bladehit) do
+            if v.Parent:FindFirstChild("HumanoidRootPart") and not hash[v.Parent] then
+                table.insert(cac, v.Parent.HumanoidRootPart)
+                hash[v.Parent] = true
+            end
+        end
+        bladehit = cac
+        if #bladehit > 0 then
+            local u8 = debug.getupvalue(AC.attack, 5)
+            local u9 = debug.getupvalue(AC.attack, 6)
+            local u7 = debug.getupvalue(AC.attack, 4)
+            local u10 = debug.getupvalue(AC.attack, 7)
+            local u12 = (u8 * 798405 + u7 * 727595) % u9
+            local u13 = u7 * 798405
+            (function()
+                u12 = (u12 * u9 + u13) % 1099511627776
+                u8 = math.floor(u12 / u9)
+                u7 = u12 - u8 * u9
+            end)()
+            u10 = u10 + 1
+            debug.setupvalue(AC.attack, 5, u8)
+            debug.setupvalue(AC.attack, 6, u9)
+            debug.setupvalue(AC.attack, 4, u7)
+            debug.setupvalue(AC.attack, 7, u10)
+            pcall(function()
+                for k, v in pairs(AC.animator.anims.basic) do
+                    v:Play()
+                end                  
+            end)
+            if plr.Character:FindFirstChildOfClass("Tool") and AC.blades and AC.blades[1] then 
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(GetCurrentBlade()))
+                game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(u12 / 1099511627776 * 16777215), u10)
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit, i, "") 
+            end
+        end
+    end
+end
+local cac
+if SuperFastMode then 
+	cac=task.wait
+else
+	cac=wait
+end
+while cac() do 
+	AttackNoCD()
+end
+            end    
+    })
+    DB:AddButton({
+        Name = "Inori's Club",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Allusia1/HereYouGo/main/ItsDone.lua"))()
+            end    
+    })
+    MS2:AddButton({
+        Name = "Zeerox Hub Best Hub",
+        Callback = function()
+            loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/miningsim2/main/rewrite.lua')()
+            end    
+    })
+    MS2:AddButton({
+        Name = "Jxnt Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://system-exodus.com/scripts/MiningSimulator/MiningSimulator2.lua", true))()
+            end    
+    })
+    SL:AddButton({
+        Name = "PremierX Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/SxnwDev/Premier/main/PremierX-Free.lua", true))()
+            end    
+    })
+    SL:AddButton({
+        Name = "V.G Hub",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+            end    
+    })
+    BF:AddButton({
+        Name = "Ren Hub V2",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/renhuball'))()
+            end    
+    })
+    BF:AddButton({
+        Name = "String Hub V2",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/OPPV01/DEX/main/Protected.lua.txt", true))()
+            end    
+    })
+    BF:AddButton({
+        Name = "Hyper Hub",
+        Callback = function()
+            pcall(function()
+                repeat wait() until game:IsLoaded()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+            end)
+            end    
+    })
+    BF:AddButton({
+        Name = "Evos X Hub PC and PE",
+        Callback = function()
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/MynameIsDoit/MonkeyHitBox/main/HEEHITBOX"))()
+            end    
+    })
+    BF:AddButton({
+        Name = "Black Trap Hub PC and PE",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/jmRUdL17"))()
+            end    
+    })
+    BF:AddButton({
+        Name = "Euphoria 1981 Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://github.com/HazeNx/shimbo/raw/main/euphoria.lua"))()
+            end    
+    })
+    BF:AddButton({
+        Name = "Ripper Hub",
+        Callback = function()
+            _G.Color = Color3.fromRGB(52, 190, 255)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/NEWBF.lua"))()
+            end    
+    })
+    BF:AddButton({
+        Name = "ATK Hub PC and PE",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/ATR",true))()
+            end    
+    })
+    AFS:AddButton({
+        Name = "Zer0 Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+            end    
+    })
+    AFS:AddButton({
+        Name = "Black Gui Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Nivyd/ShrawuRepost/main/Shrawu.lua", true))()
+            end    
+    })
+    AFS:AddButton({
+        Name = "SSJ3 Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Gohan9k/ANFSnew/main/GOHANSSJ3"))()
+            end    
+    })
+    KL:AddButton({
+        Name = "Hyper Hub",
+        Callback = function()
+            pcall(function()
+                repeat wait() until game:IsLoaded()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+            end)
+            end    
+    })
+    KL:AddButton({
+        Name = "MukuroxQuarty Hub",
+        Callback = function()
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+            end    
+    })
+    Home:AddButton({
+        Name = "Infinite Yield",
+        Callback = function()
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+            end    
+    })
+    Home:AddButton({
+        Name = "Anti AFK",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
+            end    
+    })
+    AHD:AddButton({
+        Name = "Shit Boy Hub",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Solx69/Shit-Boy-Hub-Main/main/AHD'))()
+            end    
+    })
+    AHD:AddButton({
+        Name = "Alone Hub",
+        Callback = function()
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/A%20Heros%20Destiny'),true))()
+            end    
+    })
+    Arsenal:AddButton({
+        Name = "V.G Hub",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+            end    
+    })
+    Arsenal:AddButton({
+        Name = "Dex Hub Best Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/HonestlyDex/DexHub/main/Arsenal"))()
+            end    
+    })
+    Arsenal:AddButton({
+        Name = "Owl Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end    
+    })
+
+
+
+    OrionLib:Init()
